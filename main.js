@@ -89,7 +89,7 @@ function generateWeatherInfo(weatherData) {
     summaryBox.style.opacity = 1;
     // update the weather information
     summary.textContent = `The weather forecast for ${weatherData.name} is ${weatherData.weather[0].description}`;
-    temp.textContent = `${weatherData.main.temp.toPrecision(2)} °C / ${celciusToFahrenheit(weatherData.main.temp)} °F`;
+    temp.textContent = `Temperature: ${weatherData.main.temp.toPrecision(2)} °C / ${celciusToFahrenheit(weatherData.main.temp)} °F`;
     pressure.textContent = `Pressure: ${weatherData.main.pressure} hPa`;
     humidity.textContent = `Humidity: ${weatherData.main.humidity} %`;
 }
