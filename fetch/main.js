@@ -42,7 +42,7 @@ function getWeatherData(city) {
             // Update the weather text and background image.
             if (jsonData.name.toLowerCase() === city) {
                 generateWeatherInfo(jsonData);
-                updateBackgroundImage(jsonData.weather[0].main);
+                getBackgroundImage(jsonData.weather[0].main);
             }
         }).catch(function (error) {
             console.log('Error: ' + error)
@@ -56,7 +56,7 @@ function getWeatherData(city) {
 /**
  * Uses Fetch API to fetcch background image and render it
  */
-function updateBackgroundImage(weatherType) {
+function getBackgroundImage(weatherType) {
     // informs browser to release existing reference to image object url of previously fetched image.
     if (imgObjectURL) {
         URL.revokeObjectURL(imgObjectURL);
